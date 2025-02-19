@@ -1,0 +1,242 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Header Styles */
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column; /* Default vertikal */
+    align-items: center; /* Pusatkan elemen */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styles */
+header .logo img {
+    height: 50px;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffdd57;
+}
+
+/* Main Container */
+.main-container {
+    display: flex; /* Atur elemen horizontal secara default */
+    flex-direction: row; /* Default desktop */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Kontainer untuk Konten Utama */
+.content {
+    flex: 3;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Kotak untuk Setiap Konten */
+.content .post {
+    background: #f9f9f9; /* Warna latar kotak */
+    border: 1px solid #ddd; /* Batas kotak */
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px; /* Jarak antar konten */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efek Hover pada Kotak */
+.content .post:hover {
+    transform: translateY(-5px); /* Efek mengangkat */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Bayangan lebih tegas */
+}
+
+/* Judul dalam Konten */
+.content .post h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.content .post h2:hover {
+    color: #0056b3; /* Warna saat judul dihover */
+}
+
+/* Teks Konten */
+.content .post p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #0056b3;
+}
+
+/* Image Slider */
+.image-slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slides img {
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+    font-size: 0.9em;
+    padding: 10px 0;
+    background: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Pada layar kecil (mobile), ubah elemen menjadi vertikal */
+    .main-container {
+        flex-direction: column; /* Susun elemen secara vertikal */
+    }
+
+    .sidebar {
+        margin-top: 20px; /* Tambahkan jarak di bawah konten utama */
+    }
+}
+
+@media (min-width: 769px) {
+    /* Desktop (default), pastikan layout tetap horizontal */
+    .main-container {
+        flex-direction: row; /* Susun elemen horizontal */
+    }
+
+    .sidebar {
+        margin-top: 0; /* Tidak ada jarak tambahan */
+    }
+}
