@@ -8,5 +8,5 @@
     { "src": "/api/(.*)", "dest": "/api/hello.js" },
     { "src": "/img/(.*)", "dest": "/img/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
-  ],
+  ]
 }
