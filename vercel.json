@@ -1,14 +1,9 @@
 {
   "version": 2,
   "builds": [
-    { "src": "index.html", "use": "@vercel/static" },
-    { "src": "api/hello.js", "use": "@vercel/node" }
+    { "src": "index.html", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/hello.js" },
     { "src": "/(.*)", "dest": "/index.html" }
-  ],
-  "staticFiles": {
-    "public": "public"
-  }
+  ]
 }
