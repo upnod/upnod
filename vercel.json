@@ -6,6 +6,7 @@
     { "src": "scripts.js", "use": "@vercel/static" }
   ],
   "routes": [
+    { "src": "/(styles\\.css|scripts\\.js|img/.*|icon\\.webp)", "dest": "/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
