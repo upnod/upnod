@@ -9,5 +9,4 @@
     { "src": "/img/(.*)", "dest": "/img/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
   ],
-  "cache": false
 }
