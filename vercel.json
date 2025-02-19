@@ -1,10 +1,12 @@
 {
   "version": 2,
+  "public": "img",
   "routes": [
     { "src": "/img/(.*)", "dest": "/img/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
   ],
   "builds": [
-    { "src": "index.html", "use": "@vercel/static" }
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "img/*", "use": "@vercel/static" }
   ]
 }
